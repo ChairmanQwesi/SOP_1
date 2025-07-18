@@ -5,7 +5,7 @@
 This SOP outlines the standard procedures for setting up a virtual Linux server environment tailored for web application testing. It ensures consistency in deployment, appropriate configuration, and alignment with testing requirements.
 
 ### AUDIENCE
-This document is intended for system administrators, QA engineers, DevOps teams, and IT personnel involved in provisioning virtual environments for test automation or manual web application testing.
+This document is intended for system administrators, engineers, DevOps teams, and IT personnel involved in provisioning virtual environments for test automation or manual web application testing.
 
 ### APPROVAL TABLE
 
@@ -31,7 +31,7 @@ This SOP covers the provisioning and configuration of a Linux-based virtual mach
 | VM Setup and OS Installation        | System Administrator      | opokus.rec@gmail.com     | it-support109@gmail.com | IT Manager        |
 | Software Stack Installation         | DevOps Team               | abiba.rec@gmail.com.com  | team89@gmail.com        | DevOps Lead       |
 | Networking and Security Setup       | Network Engineering Team  | kwesi.rec@gmail.com      | netsec120@gmail.com     | Network Manager   |
-| Final Testing and Validation        | QA Team                   | emma.rec@gmail.com       | support49@gmail.com     | QA Manager        |
+| Final Testing and Validation        | Board Team                | emma.rec@gmail.com       | support49@gmail.com     |  Manager        |
 | Documentation and Handoff          | Documentation Team        | richard.rec@gmail.com     | team89@gmail.com        | Tech Writer Lead  |
 
 ### EXECUTION STEPS
@@ -106,14 +106,6 @@ sudo chown -R www-data:www-data web-app-test
 ### 5.2 Configure Apache Site
 
 #### Create /etc/apache2/sites-available/web-app.conf: 
-<VirtualHost *:80>
-    ServerName web-test-server.local
-    DocumentRoot /var/www/html/web-app-test
-    <Directory /var/www/html/web-app-test>
-        AllowOverride All
-        Require all granted
-    </Directory>
-</VirtualHost>
 
 ```
 sudo a2ensite web-app.conf
@@ -140,15 +132,15 @@ Record the following in the internal wiki or documentation tool:
 3. Network configuration
 4. Default credentials and access URLs
 
-7.2 Knowledge Transfer
-Share documentation and access credentials with QA and Dev teams.
+## 7.2 Knowledge Transfer
+Share documentation and access credentials with the other teams.
 
 ## REVISION HISTORY
-| Version	| Date	| Changed By |	Summary |
-|---------|-------|------------|----------|
-|1.0   |2025-07-18 |Emmanuel Opoku	| Initial SOP creation |
-|1.1	|2025-07-20	|Jane Doe	        |Review and edits |
-|1.2	|2025-07-21	|John Smith	      |Final approval and publishing |
+| Version	| Date	    | Changed By    |	Summary            |
+|-----------|-----------|---------------|----------------------|
+|1.0        |2025-07-18 |Emmanuel Opoku	| Initial SOP creation |
+|1.1	    |2025-07-20	|Abiba Sakor	|Review and edits      |
+|1.2	    |2025-07-21	|Kwesi Poku 	|Final approval and publishing |
 
 
 
